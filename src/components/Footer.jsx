@@ -1,5 +1,9 @@
 import { Mail, Phone, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
+// NEW IMPORTS (as requested)
+import AppStore from '../assets/appStore.png';
+import GooglePlay from '../assets/GooglePlay.png';
+
 export default function Footer() {
   return (
     <footer className="bg-black py-20 border-t border-white/10">
@@ -92,17 +96,17 @@ export default function Footer() {
           <div className="flex flex-col gap-5">
             <a href="#" className="block group">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge.svg"
+                src={GooglePlay}
                 alt="Get it on Google Play"
-                className="h-14 drop-shadow-2xl transition-all duration-500 
+                className="h-14 drop-shadow-2xl transition-all duration-500   border rounded-xl
                   group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(181,152,64,0.6)]"
               />
             </a>
             <a href="#" className="block group">
               <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                src={AppStore}
                 alt="Download on the App Store"
-                className="h-14 drop-shadow-2xl transition-all duration-500 
+                className="h-14 drop-shadow-2xl transition-all duration-500 border rounded-xl 
                   group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(181,152,64,0.6)]"
               />
             </a>
