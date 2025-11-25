@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Roboto Condensed Global Class */
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* ========================
     GLOBAL NOVARIDE - LUXURY GRADIENT THEME (YELLOW + ORANGE)
    ======================== */
@@ -19,11 +27,31 @@
    ======================== */
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
   background-color: #0a0a0a;
   color: #fff6d4;
   line-height: 1.7;
   transition: background-color 0.4s, color 0.4s;
+}
+
+/* ============ Apply Everywhere ============ */
+*,
+h1, h2, h3, h4, h5, h6,
+button,
+input,
+textarea,
+select,
+p,
+span,
+a {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary-gradient);
   opacity: 0.15;
 }
- 
+
 /* ========================
          BUTTONS
    ======================== */
@@ -61,12 +89,16 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.9rem 2rem;
   cursor: pointer;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Main Gradient Button */
@@ -92,8 +124,6 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg), var(--shadow-glow);
-
-  /* ⭐ FIX ADDED — text no longer hides */
   color: #ffffff !important;
 }
 
@@ -127,7 +157,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-outline:hover {
   background: var(--primary-gradient);
-  /* -webkit-background-clip: padding-box; */
   -webkit-text-fill-color: #0f0f23;
   color: #0f0f23;
   box-shadow: var(--shadow-glow);
@@ -158,6 +187,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .card::before {
   content: "";
@@ -182,10 +216,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
+
 .bg-primary { 
   background: var(--primary-gradient);
   color: #0f0f23;
 }
+
 .bg-black { background: var(--black); }
 .bg-white { background: var(--white); color: var(--black); }
 .text-white { color: var(--white); }

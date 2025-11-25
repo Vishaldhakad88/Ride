@@ -37,10 +37,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 leading-tight"
+            className="text-4xl md:text-7xl lg:text-7xl font-extrabold text-white mb-6 leading-tight"
           >
-            <span className='text-yellow-600'>B</span>ook <span className='text-yellow-600'>A</span>ny <span className='text-yellow-600'>V</span>ehicle in{" "}
-            <span className="text-primary drop-shadow-2xl">60 Seconds</span>
+            <span className='text-yellow-400'>B</span>ook <span className='text-yellow-400'>A</span>ny <span className='text-yellow-400'>V</span>ehicle in{" "}
+            <span className="text-yellow-400 drop-shadow-2xl">60 Seconds</span>
           </motion.h1>
 
           <motion.div
@@ -84,7 +84,7 @@ export default function Home() {
           >
             <h2 className="text-5xl md:text-7xl font-extrabold mb-4">
               <span className="text-primary">Flexible Hours</span> &{' '}
-              <span className="text-white">High Earnings</span>
+              <span className="text-white font-roboto">High Earnings</span>
             </h2>
             <p className="text-2xl md:text-3xl font-bold text-primary/90">
               Become a Ryde Captain & Earn on Your Schedule!

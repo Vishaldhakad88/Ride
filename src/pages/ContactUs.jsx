@@ -94,11 +94,11 @@ export default function ContactUs() {
           transition={{ duration: 1 }}
           className="relative z-10 text-center max-w-4xl px-4"
         >
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-400 bg-clip-text text-transparent leading-tight">
-            <span className='text-yellow-600'>L</span>et's Connect
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-400 bg-clip-text text-transparent leading-tight">
+            <span className='text-yellow-400'>L</span>et's Connect
           </h1>
 
-          <p className="text-lg md:text-2xl text-gray-700 font-light mt-4 md:mt-6">
+          <p className="text-lg md:text-2xl text-gray-70 font-light mt-4 md:mt-6">
             Have a question? Want to partner?
             <span className="block mt-2 text-orange-400 font-bold">We’re always listening!</span>
           </p>
@@ -130,7 +130,7 @@ export default function ContactUs() {
                   <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                     <item.icon className="w-7 h-7 md:w-10 md:h-10 text-white" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center">{item.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-black text-center">{item.title}</h3>
                   <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-orange-600 to-yellow-500 text-transparent bg-clip-text text-center">
                     {item.info}
                   </p>
@@ -154,7 +154,7 @@ export default function ContactUs() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 md:mb-10">
-              Drop a <span className="bg-gradient-to-r from-orange-600 to-yellow-500 text-transparent bg-clip-text">Message</span>
+              Drop a <span className="bg-gradient-to-r from-orange-500 to-yellow-300 text-transparent bg-clip-text">Message</span>
             </h2>
 
             {isSubmitted && (

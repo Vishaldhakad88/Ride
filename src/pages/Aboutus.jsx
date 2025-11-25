@@ -67,7 +67,7 @@ const Aboutus = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 drop-shadow-2xl leading-tight"
+                className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-2xl leading-tight"
               >
                 <span className="text-yellow-400">R</span>ide the Future with{" "}
                 <span className="text-yellow-400">Ryde</span>
