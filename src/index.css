@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+/* ========================
+    GLOBAL NOVARIDE - LUXURY GRADIENT THEME (YELLOW + ORANGE)
+   ======================== */
+:root {
+  --primary-gradient: linear-gradient(45deg, #ff8c00, #ffa500, #ffcc33, #fff2a3);
+  --primary-gradient-hover: linear-gradient(45deg, #e67a00, #ff9a00, #e6b800, #ffe680);
+  --black: #0f0f23;
+  --white: #ffffff;
+  --radius: 0.75rem;
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.3);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.35);
+  --shadow-glow: 0 0 30px rgba(255, 170, 0, 0.4);
+}
+
+/* ========================
+        BASE STYLES
+   ======================== */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: #0a0a0a;
+  color: #fff6d4;
+  line-height: 1.7;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff2a3;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.hero,
+.hero-section,
+.banner,
+.main-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #261b0f 50%, #332407 100%);
+  color: #fff2a3 !important;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  opacity: 0.15;
+}
+ 
+/* ========================
+         BUTTONS
+   ======================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* Main Gradient Button */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #0f0f23 !important;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  filter: brightness(1.2);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+/* ========================
+   ⭐ FIXED TEXT ON HOVER
+   ======================== */
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+
+  /* ⭐ FIX ADDED — text no longer hides */
+  color: #ffffff !important;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  color: #e7e5de;
+  border: 2px solid transparent;
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.btn-outline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid;
+  border-image: var(--primary-gradient) 1;
+  border-radius: var(--radius);
+  transition: all 0.35s;
+}
+.btn-outline:hover {
+  background: var(--primary-gradient);
+  /* -webkit-background-clip: padding-box; */
+  -webkit-text-fill-color: #0f0f23;
+  color: #0f0f23;
+  box-shadow: var(--shadow-glow);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: rgba(255, 170, 0, 0.1);
+  color: #ffdd77;
+  border: 1px solid rgba(255, 224, 150, 0.3);
+}
+.btn-ghost:hover {
+  background: var(--primary-gradient-hover);
+  color: #0f0f23;
+  box-shadow: var(--shadow-glow);
+}
+
+/* ========================
+         CARD
+   ======================== */
+.card {
+  background: linear-gradient(135deg, rgba(26,26,46,0.95), rgba(15,15,35,0.98));
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 180, 0, 0.25);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border-color: rgba(255, 200, 80, 0.5);
+}
+
+/* ========================
+       UTILITIES
+   ======================== */
+.text-primary { 
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.bg-primary { 
+  background: var(--primary-gradient);
+  color: #0f0f23;
+}
+.bg-black { background: var(--black); }
+.bg-white { background: var(--white); color: var(--black); }
+.text-white { color: var(--white); }
+.text-black { color: var(--black); }
+
+.icon-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
