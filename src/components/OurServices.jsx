@@ -33,7 +33,7 @@ const OurServices = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-black" id="services">
+    <section className="py-16 sm:py-20 md:py-24 " id="services">
       <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-10 text-white">
         Our Services
       </h3>
@@ -66,7 +66,7 @@ const OurServices = () => {
               overflow-hidden 
               rounded-2xl 
               shadow-xl 
-              bg-yellow-500 
+             
               border 
               border-gray-200 
               hover:shadow-2xl 
@@ -81,12 +81,13 @@ const OurServices = () => {
                   className="
                     w-full 
                     h-32 
+                    p-2
                     sm:h-40 
-                    md:h-48 
+                    md:h-42 
                     object-cover 
                     transition-transform 
                     duration-700 
-                    group-hover:scale-110
+                    group-hover:scale-150
                   "
                 />
               </div>
@@ -96,7 +97,7 @@ const OurServices = () => {
                 absolute 
                 inset-0 
                 bg-gradient-to-t 
-                from-yellow-500 
+                from-gray-500 
                 to-transparent 
                 opacity-0 
                 group-hover:opacity-100 

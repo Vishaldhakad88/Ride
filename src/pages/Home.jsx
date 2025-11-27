@@ -39,8 +39,8 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-4xl md:text-7xl lg:text-7xl font-extrabold text-white mb-6 leading-tight"
           >
-            <span className='text-yellow-400'>B</span>ook <span className='text-yellow-400'>A</span>ny <span className='text-yellow-400'>V</span>ehicle in{" "}
-            <span className="text-yellow-400 drop-shadow-2xl">60 Seconds</span>
+            <span className='text-yellow-400'>B</span>ook <span className='text-white'>A</span>ny <span className='text-white'>V</span>ehicle in{" "}
+            <span className="text-white drop-shadow-2xl">60 Seconds</span>
           </motion.h1>
 
           <motion.div
@@ -50,23 +50,14 @@ export default function Home() {
             className="flex justify-center"
           >
             {/* Global btn-primary + outline style */}
-            <button className="btn btn-outline text-xl font-bold px-12 py-5 flex items-center gap-4 group">
-              <span>Book Your Ride Now</span>
+            <button className="bg-yellow-400 border border-white  text-xl font-bold px-4 py-2 flex items-center gap-2 group rounded-4xl cursor-pointer">
+              <h3 className='p-1'>Book Your Ride Now</h3>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300 icon-gradient" />
             </button>
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          animate={{ y: [0, 15, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-8 h-14 border-2 border-white/60 rounded-full flex justify-center">
-            <div className="w-1 h-4 bg-white rounded-full mt-3"></div>
-          </div>
-        </motion.div>
+        
       </section>
 
       <OurServices />
@@ -133,7 +124,7 @@ export default function Home() {
             whileInView={{ scale: 1 }}
             className="text-center"
           >
-            <h3 className="text-4xl md:text-6xl font-extrabold mb-10 text-primary">
+            <h3 className="text-4xl md:text-6xl font-extrabold mb-10 ">
               Start Earning Today!
             </h3>
 

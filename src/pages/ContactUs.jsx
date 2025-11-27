@@ -68,7 +68,7 @@ export default function ContactUs() {
         {mounted && sparkles.map((s, i) => (
           <motion.div
             key={i}
-            className="absolute text-yellow-500/70"
+            className="absolute text-yellow-400/70"
             initial={{ opacity: 0, scale: 0 }}
             animate={{
               opacity: [0, 1, 0],
@@ -94,13 +94,13 @@ export default function ContactUs() {
           transition={{ duration: 1 }}
           className="relative z-10 text-center max-w-4xl px-4"
         >
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-400 bg-clip-text text-transparent leading-tight">
             <span className='text-yellow-400'>L</span>et's Connect
           </h1>
 
           <p className="text-lg md:text-2xl text-gray-70 font-light mt-4 md:mt-6">
             Have a question? Want to partner?
-            <span className="block mt-2 text-orange-400 font-bold">We’re always listening!</span>
+            <span className="block mt-2 text-yellow-400 font-bold">We’re always listening!</span>
           </p>
         </motion.div>
       </section>
@@ -127,11 +127,11 @@ export default function ContactUs() {
                 <motion.div
                   className="relative bg-white/80 backdrop-blur-2xl border border-yellow-300/40 rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-yellow-400/50 transition-all duration-500"
                 >
-                  <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                     <item.icon className="w-7 h-7 md:w-10 md:h-10 text-white" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-black text-center">{item.title}</h3>
-                  <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-orange-600 to-yellow-500 text-transparent bg-clip-text text-center">
+                  <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-600 to-yellow-400 text-transparent bg-clip-text text-center">
                     {item.info}
                   </p>
                   <p className="text-sm text-gray-600 mt-2 text-center">{item.detail}</p>
@@ -154,7 +154,7 @@ export default function ContactUs() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 md:mb-10">
-              Drop a <span className="bg-gradient-to-r from-orange-500 to-yellow-300 text-transparent bg-clip-text">Message</span>
+              Drop a <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 text-transparent bg-clip-text">Message</span>
             </h2>
 
             {isSubmitted && (
@@ -176,33 +176,33 @@ export default function ContactUs() {
                 <input
                   type="text" name="name" value={formData.name} onChange={handleChange}
                   placeholder="Full Name" required
-                  className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-orange-500 shadow-sm focus:shadow-lg transition-all"
+                  className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-yellow-400 shadow-sm focus:shadow-lg transition-all"
                 />
 
                 <input
                   type="email" name="email" value={formData.email} onChange={handleChange}
                   placeholder="Email Address" required
-                  className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-orange-500 shadow-sm focus:shadow-lg transition-all"
+                  className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-yellow-400 shadow-sm focus:shadow-lg transition-all"
                 />
               </div>
 
               <input
                 type="tel" name="phone" value={formData.phone} onChange={handleChange}
                 placeholder="Phone (Optional)"
-                className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-orange-500 shadow-sm focus:shadow-lg transition-all"
+                className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-yellow-400 shadow-sm focus:shadow-lg transition-all"
               />
 
               <textarea
                 name="message" rows="5" value={formData.message} onChange={handleChange}
                 placeholder="Your Message..."
-                className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-orange-500 shadow-sm focus:shadow-lg transition-all resize-none"
+                className="w-full p-4 md:p-5 bg-white/20 backdrop-blur-xl rounded-2xl border border-yellow-400/40 focus:border-yellow-400 shadow-sm focus:shadow-lg transition-all resize-none"
               />
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full py-4 md:py-5 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-400 text-white font-bold text-lg md:text-xl rounded-2xl shadow-2xl"
+                className="w-full py-4 md:py-5 bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-400 text-white font-bold text-lg md:text-xl rounded-2xl shadow-2xl"
               >
                 <Send className="w-5 h-5 md:w-6 md:h-6 inline-block mr-2" />
                 Send Message
@@ -226,7 +226,7 @@ export default function ContactUs() {
               />
               <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl">
                 <p className="text-lg md:text-2xl font-bold text-gray-800 flex items-center gap-2 md:gap-3">
-                  <MapPin className="text-orange-600" />
+                  <MapPin className="text-yellow-600" />
                   Ryde HQ – Mumbai
                 </p>
               </div>
@@ -243,7 +243,7 @@ export default function ContactUs() {
                     href="#"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-2xl flex items-center justify-center text-white shadow-xl"
+                    className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center text-white shadow-xl"
                   >
                     <Icon className="w-6 h-6 md:w-8 md:h-8" />
                   </motion.a>

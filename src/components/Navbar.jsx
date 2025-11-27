@@ -131,7 +131,7 @@ export default function Navbar() {
           <a 
             href="#book"
             onClick={handleBookNow}
-            className="bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-400 rounded-4xl text-lg font-bold px-10 py-3 hover:text-white"
+            className="bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-400 rounded-4xl text-lg font-bold px-10 py-3 hover:text-white"
           >
             Book Now
           </a>

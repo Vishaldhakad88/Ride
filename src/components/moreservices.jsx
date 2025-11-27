@@ -20,11 +20,11 @@ const services = [
 
 const MoreServices = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-black">
+    <section className="py-24 relative overflow-hidden ">
       {/* Subtle golden radial glows */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-0 left-0 w-96 h-96  rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96  rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -34,7 +34,7 @@ const MoreServices = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-7 py-3 rounded-full text-sm font-bold uppercase tracking-wider border-2 border-primary/50 bg-primary/10 text-primary shadow-lg shadow-primary/20"
+            className="inline-block px-7 py-3 rounded-full text-sm font-bold uppercase tracking-wider border-2 border-primary/50 bg-primary/10  shadow-lg shadow-primary/20"
           >
             Provided just for you
           </motion.span>
@@ -44,7 +44,7 @@ const MoreServices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
-            className="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary drop-shadow-2xl"
+            className="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold  drop-shadow-2xl"
           >
             Services Offered
           </motion.h2>
