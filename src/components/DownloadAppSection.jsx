@@ -23,7 +23,7 @@ export default function DownloadAppSection() {
             className="text-center md:text-left space-y-10 order-2 md:order-1"
           >
             {/* Tag */}
-            <div className="inline-block px-6 py-3 rounded-full text-primary border-2 border-primary/50 bg-primary/10 font-bold text-sm uppercase tracking-wider">
+            <div className="inline-block px-6 py-3 rounded-full text-black border-2 border-primary/50 bg-primary/10 font-bold text-sm uppercase tracking-wider">
               Download App Now
             </div>
 
