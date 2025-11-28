@@ -1,0 +1,75 @@
+/* FULL SCREEN STAR BACKGROUND */
+.star-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;          /* Always behind page content */
+  pointer-events: none; /* Safe for clicking */
+  overflow: hidden;
+}
+
+/* Base star design */
+.star {
+  position: absolute;
+  background: radial-gradient(circle, #fff8c0 0%, #ffd443 40%, #f7b000 70%, transparent 100%);
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 12px rgba(255, 200, 50, 0.35));
+  opacity: 0.95;
+}
+
+/* Different star positions + animation */
+.star-1 {
+  width: 18px; height: 18px;
+  left: 12%; top: 25%;
+  animation: starMove1 12s linear infinite;
+}
+
+.star-2 {
+  width: 12px; height: 12px;
+  left: 65%; top: 18%;
+  animation: starMove2 15s linear infinite;
+  opacity: 0.85;
+}
+
+.star-3 {
+  width: 22px; height: 22px;
+  left: 40%; top: 75%;
+  animation: starMove3 18s linear infinite;
+}
+
+.star-4 {
+  width: 14px; height: 14px;
+  left: 80%; top: 60%;
+  animation: starMove2 20s linear infinite;
+}
+
+.star-5 {
+  width: 10px; height: 10px;
+  left: 25%; top: 10%;
+  animation: starMove1 22s linear infinite;
+}
+
+@keyframes starMove1 {
+  0%   { transform: translate(0,0) scale(1); }
+  50%  { transform: translate(40px, -60px) scale(1.1); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+@keyframes starMove2 {
+  0%   { transform: translate(0,0) scale(0.9); }
+  50%  { transform: translate(-60px, -40px) scale(1.05); }
+  100% { transform: translate(0,0) scale(0.9); }
+}
+
+@keyframes starMove3 {
+  0%   { transform: translate(0,0) scale(1); }
+  50%  { transform: translate(-40px, -100px) scale(1.15); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    animation: none !important;
+    opacity: 0.75;
+  }
+}

@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 // All 8 images
 import red1 from '../assets/red1.png';
@@ -12,14 +17,7 @@ import sharingAuto from '../assets/sharingauto.png';
 import premiumCar from '../assets/premiumcar.png';
 
 const OurServices = () => {
-  const cardVariants = {
-    offscreen: { y: 100, opacity: 0 },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", bounce: 0.4, duration: 1 }
-    }
-  };
+  const cardsRef = useRef([]);
 
   const vehicles = [
     { name: "Car",           img: red1 },
@@ -32,47 +30,68 @@ const OurServices = () => {
     { name: "Premium Car",   img: premiumCar },
   ];
 
+  useEffect(() => {
+    cardsRef.current.forEach((card) => {
+      const anim = gsap.fromTo(
+        card,
+        { y: 80, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out", paused: true }
+      );
+
+      ScrollTrigger.create({
+        trigger: card,
+        start: "top 85%",
+        onEnter: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: card,
+        start: "top bottom",
+        onLeaveBack: () => anim.pause(0),
+      });
+    });
+  }, []);
+
   return (
-    <section className="py-16 sm:py-20 md:py-24 " id="services">
+    <section className="py-16 sm:py-20 md:py-24" id="services">
       <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-10 text-white">
         Our Services
       </h3>
 
-      <div className="
-        grid 
-        grid-cols-2 
-        sm:grid-cols-3 
-        md:grid-cols-4 
-        gap-4 
-        sm:gap-6 
-        md:gap-8 
-        max-w-6xl 
-        mx-auto 
-        px-4
-      ">
+      <div
+        className="
+          grid 
+          grid-cols-2 
+          sm:grid-cols-3 
+          md:grid-cols-4 
+          gap-4 
+          sm:gap-6 
+          md:gap-8 
+          max-w-6xl 
+          mx-auto 
+          px-4
+        "
+      >
         {vehicles.map((vehicle, index) => (
-          <motion.div
+          <div
             key={vehicle.name}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={cardVariants}
-            transition={{ delay: index * 0.1 }}
-            className="group cursor-pointer rounded-xl"
+            ref={(el) => (cardsRef.current[index] = el)}
+            className="group cursor-pointer rounded-3xl 
+                border-4 border-amber-400 "
           >
             {/* CARD BOX */}
-            <div className="
-              relative 
-              overflow-hidden 
-              rounded-2xl 
-              shadow-xl 
-             
-              border 
-              border-gray-200 
-              hover:shadow-2xl 
-              transition-all 
-              duration-500
-            ">
+            <div
+              className="
+                relative 
+                overflow-hidden 
+                rounded-2xl 
+                shadow-xl  
+                border-gray-200 
+                hover:shadow-2xl 
+                transition-all 
+                duration-500
+              "
+            >
               {/* Image */}
               <div className="overflow-hidden">
                 <img
@@ -80,52 +99,55 @@ const OurServices = () => {
                   alt={vehicle.name}
                   className="
                     w-full 
-                    h-32 
-                    p-2
+                    h-32
                     sm:h-40 
                     md:h-42 
                     object-cover 
                     transition-transform 
                     duration-700 
-                    group-hover:scale-150
+                    group-hover:scale-120
                   "
                 />
               </div>
 
               {/* Overlay */}
-              <div className="
-                absolute 
-                inset-0 
-                bg-gradient-to-t 
-                from-gray-500 
-                to-transparent 
-                opacity-0 
-                group-hover:opacity-100 
-                transition-opacity 
-                duration-500
-              " />
+              <div
+                className="
+                  absolute 
+                  inset-0 
+                  bg-gradient-to-t 
+                  from-gray-600 
+                  to-transparent 
+                  opacity-0 
+                  group-hover:opacity-100 
+                  transition-opacity 
+                  duration-500
+                "
+              />
 
               {/* Text */}
-              <div className="
-                absolute 
-                bottom-0 
-                left-0 
-                right-0 
-                p-2 
-                sm:p-3 
-                text-center 
-                transform 
-                translate-y-full 
-                group-hover:translate-y-0 
-                transition-transform 
-                duration-500
-              ">
+              <div
+                className="
+                  absolute 
+                  bottom-0 
+                  left-0 
+                  right-0 
+                  p-2 
+                  sm:p-3 
+                  text-center 
+                  transform 
+                  translate-y-full 
+                  group-hover:translate-y-0 
+                  transition-transform 
+                  duration-500
+                "
+              >
                 <h3 className="text-white font-bold text-sm sm:text-base md:text-lg drop-shadow-lg">
                   {vehicle.name}
                 </h3>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

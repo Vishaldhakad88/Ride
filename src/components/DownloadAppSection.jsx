@@ -30,7 +30,7 @@ export default function DownloadAppSection() {
             {/* Heading */}
             <h2 className="text-4xl md:text-4xl lg:text-6xl font-extrabold leading-tight">
               Download the App &{" "}
-              <span className="text-primary drop-shadow-2xl">
+              <span className="text-yellow-400 drop-shadow-2xl">
                 Book Your Ride Instantly
               </span>
             </h2>

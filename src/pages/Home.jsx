@@ -74,7 +74,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-7xl font-extrabold mb-4">
-              <span className="text-primary">Flexible Hours</span> &{' '}
+            <span className="text-yellow-400">Flexible Hours</span> &{' '}
               <span className="text-white font-roboto">High Earnings</span>
             </h2>
             <p className="text-2xl md:text-3xl font-bold text-primary/90">
@@ -131,7 +131,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#download"
-                className="btn btn-outline hover:text-white text-xl font-bold px-10 py-5 flex items-center gap-3"
+                className="text-yellow-400 border-2 rounded-2xl hover:text-white text-xl font-bold px-8 py-2 flex items-center gap-3"
               >
                 Download Captain App Now
                 <ArrowRight className="icon-gradient" />
@@ -139,7 +139,7 @@ export default function Home() {
 
               <a
                 href="tel:+919876543210"
-                className="btn btn-outline text-xl font-bold px-10 py-5"
+                className=" text-yellow-400 border-2 rounded-2xl  hover:text-white  font-bold text-xl font-bold px-8 py-2"
               >
                 Call Now: +91 98765 43210
               </a>

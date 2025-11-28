@@ -34,7 +34,7 @@ const MoreServices = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-7 py-3 rounded-full text-sm font-bold uppercase tracking-wider border-2 border-primary/50 bg-primary/10  shadow-lg shadow-primary/20"
+            className="inline-block px-7 py-3 rounded-full text-sm font-bold uppercase tracking-wider border-2 border-primary/50   shadow-lg shadow-primary/20"
           >
             Provided just for you
           </motion.span>
@@ -70,8 +70,8 @@ const MoreServices = () => {
                 </div>
 
                 {/* Icon with gradient background */}
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 shadow-2xl shadow-primary/40 transition-all duration-500 group-hover:scale-110">
-                  <Icon className="w-9 h-9 text-black" strokeWidth={2.5} />
+                <div className="w-16 h-16 rounded-full  flex items-center justify-center mb-6 shadow-2xl shadow-primary/40 transition-all duration-500 group-hover:scale-110">
+                  <Icon className="w-9 h-9 text-yellow-400 border-2 p-4 w-40 h-16  rounded-full" strokeWidth={2.5} />
                 </div>
 
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
