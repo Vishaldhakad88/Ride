@@ -63,7 +63,7 @@ export default function Home() {
       <OurServices />
 
       {/* Driver Benefits Section – Now Uses Global Classes Only */}
-      <section className="py-20 bg-gradient-to-b from-black to-[#0a0a0a] text-white">
+      <section className="py-20 bg-gradient-to-b from-white to-[#0a0a0a] text-black">
         <div className="max-w-7xl mx-auto px-6">
 
           <motion.div
@@ -75,12 +75,12 @@ export default function Home() {
           >
             <h2 className="text-5xl md:text-7xl font-extrabold mb-4">
             <span className="text-yellow-400">Flexible Hours</span> &{' '}
-              <span className="text-white font-roboto">High Earnings</span>
+              <span className="text-black font-roboto">High Earnings</span>
             </h2>
             <p className="text-2xl md:text-3xl font-bold text-primary/90">
               Become a Ryde Captain & Earn on Your Schedule!
             </p>
-            <p className="mt-4 text-xl text-gray-400">
+            <p className="mt-4 text-xl text-yellow-40">
               Drive whenever you want • Be your own boss • Zero stress
             </p>
           </motion.div>
@@ -108,7 +108,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
                 <div className="absolute bottom-0 p-8 text-left">
-                  <item.icon className="w-12 h-12 icon-gradient mb-4" />
+                  <item.icon className="w-12 h-12 text-white mb-4" />
                   <h3 className="text-3xl font-bold mb-2 text-primary drop-shadow-2xl">
                     {item.title}
                   </h3>
@@ -124,7 +124,7 @@ export default function Home() {
             whileInView={{ scale: 1 }}
             className="text-center"
           >
-            <h3 className="text-4xl md:text-6xl font-extrabold mb-10 ">
+            <h3 className="text-4xl text-white md:text-6xl font-extrabold mb-10 ">
               Start Earning Today!
             </h3>
 

@@ -14,7 +14,7 @@
 :root {
   --primary-gradient: linear-gradient(45deg, yellow, yellow, #ffcc33, yellow);
   --primary-gradient-hover: linear-gradient(45deg,  yellow, yellow, #ffcc33, yellow);
-  --black: #0f0f23;
+  --black: --white;
   --white: #ffffff;
   --radius: 0.75rem;
   --shadow-md: 0 4px 20px rgba(0,0,0,0.3);
@@ -32,8 +32,8 @@ body {
   font-weight: 400;
   font-style: normal;
 
-  background-color: #0a0a0a;
-  color: #fff6d4;
+  /* background-color: #0a0a0a; */
+  /* color: #fff6d4; */
   line-height: 1.7;
   transition: background-color 0.4s, color 0.4s;
 }
@@ -52,11 +52,6 @@ a {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #fff2a3;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .hero,
@@ -222,10 +217,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #0f0f23;
 }
 
-.bg-black { background: var(--black); }
+.bg-white { background: var(--black); }
 .bg-white { background: var(--white); color: var(--black); }
 .text-white { color: var(--white); }
-.text-black { color: var(--black); }
+/* .text-black { color: var(--black); } */
 
 .icon-gradient {
   background: var(--primary-gradient);

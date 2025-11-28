@@ -8,7 +8,7 @@ import GooglePlay from '../assets/GooglePlay.png';
 
 export default function DownloadAppSection() {
   return (
-    <section id="download" className="py-24 bg-black/95 overflow-hidden">
+    <section id="download" className="py-24 bg-white/95 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* GRID – Text LEFT & Image RIGHT */}
@@ -36,7 +36,7 @@ export default function DownloadAppSection() {
             </h2>
 
             {/* Description */}
-            <p className="text-gray-300 text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+            <p className="text-black text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
               Bike, Auto, Cab, SUV – sab ek hi app mein. Real-time tracking,
               cashless payment, no surge pricing aur 2 minute pickup!
             </p>
@@ -60,7 +60,7 @@ export default function DownloadAppSection() {
                   <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30">
                     <Check className="w-4 h-4 text-black font-bold" />
                   </div>
-                  <span className="text-lg text-gray-200 font-medium">{feature}</span>
+                  <span className="text-lg text-black font-medium">{feature}</span>
                 </motion.div>
               ))}
             </div>

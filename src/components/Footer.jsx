@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Download App */}
         <div>
-          <h3 className="text-white font-bold text-xl mb-8 relative inline-block
+          <h3 className="text-black font-bold text-xl mb-8 relative inline-block
             after:content-[''] after:absolute after:left-0 after:bottom-[-8px] 
             after:h-1 after:bg-primary after:rounded-full after:w-12 after:transition-all after:duration-500
             hover:after:w-full">

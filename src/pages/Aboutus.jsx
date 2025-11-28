@@ -56,9 +56,9 @@ const Aboutus = () => {
           <div className="absolute inset-0 bg-black/60" />
 
           {/* Yellow-yellow Glow Effects */}
-          <div className="absolute top-10 left-0 md:left-10 w-80 h-80 md:w-96 md:h-96 bg-yellow-400/30 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-10 left-0 md:left-10 w-80 h-80 md:w-96 md:h-96 bg-yellow-600/30 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-10 right-0 md:right-10 w-80 h-80 md:w-96 md:h-96 bg-yellow-400/30 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-yellow-600/20 rounded-full blur-3xl animate-pulse" />
 
           {/* Content */}
           <div className="relative h-full flex items-center justify-center text-center px-4 sm:px-6">
@@ -133,7 +133,7 @@ const Aboutus = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-4xl sm:text-4xl md:text-3xl lg:text-5xl text-center font-extrabold text-black mb-6 drop-shadow-2xl leading-tight"
+              className="text-4xl sm:text-4xl md:text-3xl lg:text-5xl text-center font-extrabold text-black mb-6 drop-shadow-2xl text-black"
             >
               What We Offer
             </motion.h2>
@@ -156,7 +156,7 @@ const Aboutus = () => {
     >
       <div className={`w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-6 rounded-3xl bg-gradient-to-br ${service.gradient} p-2 shadow-2xl group-hover:shadow-yellow-400/50 transition-all duration-500`}>
         <div className="w-full h-full bg-white/95 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-inner border border-yellow-800">
-          <service.icon className="w-14 h-14 sm:w-16 sm:h-16 text-gray-40" />
+          <service.icon className="w-14 h-14 sm:w-16 sm:h-16 text-black" />
         </div>
       </div>
 
@@ -237,7 +237,7 @@ const Aboutus = () => {
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 className="mt-20"
               >
-                <Bike className="w-32 h-32 sm:w-40 sm:h-40 mx-auto text-yellow-40 drop-shadow-2xl" />
+                <Bike className="w-32 h-32 sm:w-40 sm:h-40 mx-auto text-black drop-shadow-2xl" />
               </motion.div>
             </motion.div>
           </div>

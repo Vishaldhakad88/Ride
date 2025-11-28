@@ -54,7 +54,7 @@ const OurServices = () => {
 
   return (
     <section className="py-16 sm:py-20 md:py-24" id="services">
-      <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-10 text-white">
+      <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-10 text-black">
         Our Services
       </h3>
 

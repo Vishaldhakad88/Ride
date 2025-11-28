@@ -752,7 +752,7 @@ const DuePackages = () => {
         {/* Add Category Modal */}
         {isSidebarOpen && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-white bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={handleCloseSidebar}
           >
             <div
@@ -861,7 +861,7 @@ const DuePackages = () => {
         {/* Add Dues Modal */}
         {isDuesSidebarOpen && selectedCategory && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-white bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={handleCloseDuesSidebar}
           >
             <div
