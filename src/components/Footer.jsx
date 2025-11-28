@@ -98,7 +98,7 @@ export default function Footer() {
               <img
                 src={GooglePlay}
                 alt="Get it on Google Play"
-                className="h-14 drop-shadow-2xl transition-all duration-500   border rounded-xl
+                className="h-14 drop-shadow-2xl transition-all duration-500 border-3 border-amber-300 rounded-xl
                   group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(181,152,64,0.6)]"
               />
             </a>
@@ -106,7 +106,7 @@ export default function Footer() {
               <img
                 src={AppStore}
                 alt="Download on the App Store"
-                className="h-14 drop-shadow-2xl transition-all duration-500 border rounded-xl 
+                className="h-14 drop-shadow-2xl transition-all duration-500 border-3 border-amber-300 rounded-xl 
                   group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(181,152,64,0.6)]"
               />
             </a>

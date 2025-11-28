@@ -71,7 +71,7 @@ export default function DownloadAppSection() {
                 <img
                   src={GooglePlay}
                   alt="Google Play"
-                  className="h-14 drop-shadow-2xl filter brightness-110"
+                  className="h-14 drop-shadow-4xl filter brightness-110 border-3 border-black rounded-xl"
                 />
               </motion.a>
 
@@ -79,7 +79,7 @@ export default function DownloadAppSection() {
                 <img
                   src={AppStore}
                   alt="App Store"
-                  className="h-14 drop-shadow-2xl border border rounded"
+                  className="h-14 drop-shadow-2xl border-3 border-black rounded-xl"
                 />
               </motion.a>
             </div>

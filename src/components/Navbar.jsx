@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Car, Menu, X } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
@@ -78,16 +78,28 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-        <Link 
-          to="/" 
-          className="text-3xl font-bold text-primary"
-          onClick={() => {
-            setMobileMenu(false);
-            if (location.pathname === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
-          Ryde
-        </Link>
+        <Link
+  to="/"
+  style={{
+    fontSize: "1.875rem",
+    fontWeight: "bold",
+    color: "yellow",   // your primary color variable
+    display: "flex",
+    alignItems: "center",
+    gap: "4px",
+    textDecoration: "none"
+  }}
+  onClick={() => {
+    setMobileMenu(false);
+    if (location.pathname === "/")
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+>
+  RYD
+  <Car style={{ color: "#FDE047" }} />   {/* yellow-300 */}
+  E
+</Link>
+
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
