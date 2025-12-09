@@ -95,9 +95,9 @@ export default function Navbar() {
       window.scrollTo({ top: 0, behavior: "smooth" });
   }}
 >
-  RYD
+  TRY
   <Car style={{ color: "#FDE047" }} />   {/* yellow-300 */}
-  E
+  DE
 </Link>
 
 

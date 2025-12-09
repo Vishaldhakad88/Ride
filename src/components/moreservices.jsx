@@ -62,7 +62,7 @@ const MoreServices = () => {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -12, scale: 1.04 }}
-                className="card group relative rounded-2xl p-8 overflow-hidden border border-white/10"
+                className=" group relative rounded-2xl p-8 overflow-hidden border border-white/10 bg-black"
               >
                 {/* Shine effect on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">

@@ -99,7 +99,7 @@ const OurServices = () => {
                 {/* Circle */}
                 <div
                   className={`
-                    rounded-full 
+                    rounded-2xl 
                     overflow-hidden 
                     circle-3d
                     transition-all duration-300 
