@@ -1,10 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
 
 // All 8 images
 import red1 from '../assets/red1.png';
@@ -17,140 +11,118 @@ import sharingAuto from '../assets/sharingauto.png';
 import premiumCar from '../assets/premiumcar.png';
 
 const OurServices = () => {
-  const cardsRef = useRef([]);
-
   const vehicles = [
-    { name: "Car",           img: red1 },
-    { name: "Bike",          img: red2 },
-    { name: "Mini Van",      img: red3 },
-    { name: "Auto",          img: red4 },
-    { name: "Pickup",        img: red5 },
-    { name: "Parcel",        img: red6 },
-    { name: "Sharing Auto",  img: sharingAuto },
-    { name: "Premium Car",   img: premiumCar },
+    { 
+      name: "Car", 
+      img: red1,
+      className: "w-20 h-20 p-3 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
+    { 
+      name: "Bike", 
+      img: red2,
+      className: "w-20 h-20 p-5 sm:w-24 sm:h-24 md:w-28 md:h-28"  // BIKE SMALLER
+    },
+    { 
+      name: "Mini Van", 
+      img: red3,
+      className: "w-20 h-20 p-4 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
+    { 
+      name: "Auto", 
+      img: red4,
+      className: "w-20 h-20 p-4 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
+    { 
+      name: "Pickup", 
+      img: red5,
+      className: "w-20 h-20 p-4 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
+    { 
+      name: "Parcel", 
+      img: red6,
+      className: "w-20 h-20 p-2 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
+    { 
+      name: "Sharing Auto", 
+      img: sharingAuto,
+      className: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
+    { 
+      name: "Premium Car", 
+      img: premiumCar,
+      className: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" 
+    },
   ];
 
-  useEffect(() => {
-    cardsRef.current.forEach((card) => {
-      const anim = gsap.fromTo(
-        card,
-        { y: 80, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out", paused: true }
-      );
-
-      ScrollTrigger.create({
-        trigger: card,
-        start: "top 85%",
-        onEnter: () => anim.play(),
-      });
-
-      ScrollTrigger.create({
-        trigger: card,
-        start: "top bottom",
-        onLeaveBack: () => anim.pause(0),
-      });
-    });
-  }, []);
-
   return (
-    <section className="py-16 sm:py-20 md:py-24" id="services">
-      <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-10 text-black">
-        Our Services
-      </h3>
+    <>
+      {/* KEYFRAMES + SCROLLBAR HIDE */}
+      <style>
+        {`
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
 
-      <div
-        className="
-          grid 
-          grid-cols-2 
-          sm:grid-cols-3 
-          md:grid-cols-4 
-          gap-4 
-          sm:gap-6 
-          md:gap-8 
-          max-w-6xl 
-          mx-auto 
-          px-4
-        "
-      >
-        {vehicles.map((vehicle, index) => (
-          <div
-            key={vehicle.name}
-            ref={(el) => (cardsRef.current[index] = el)}
-            className="group cursor-pointer rounded-3xl 
-                border-4 border-amber-400 "
-          >
-            {/* CARD BOX */}
-            <div
-              className="
-                relative 
-                overflow-hidden 
-                rounded-2xl 
-                shadow-xl  
-                border-gray-200 
-                hover:shadow-2xl 
-                transition-all 
-                duration-500
-              "
-            >
-              {/* Image */}
-              <div className="overflow-hidden">
-                <img
-                  src={vehicle.img}
-                  alt={vehicle.name}
-                  className="
-                    w-full 
-                    h-32
-                    sm:h-40 
-                    md:h-42 
-                    object-cover 
-                    transition-transform 
-                    duration-700 
-                    group-hover:scale-120
-                  "
-                />
-              </div>
+          @keyframes floatMove {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+          }
 
-              {/* Overlay */}
+          .circle-3d {
+            box-shadow: 
+              0px 10px 18px rgba(0,0,0,0.25),
+              0px 4px 8px rgba(0,0,0,0.15),
+              inset 0px 4px 8px rgba(255,255,255,0.3);
+            animation: floatMove 3s ease-in-out infinite;
+          }
+        `}
+      </style>
+
+      <section className="py-14 sm:py-16 md:py-20" id="services">
+        <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl text-center mb-5 text-black">
+          Our Services
+        </h3>
+
+        {/* Horizontal Scroll */}
+        <div className="w-full overflow-x-auto hide-scrollbar px-4 pt-4">
+          <div className="flex gap-6 sm:gap-8 md:gap-10">
+            {vehicles.map((vehicle) => (
               <div
-                className="
-                  absolute 
-                  inset-0 
-                  bg-gradient-to-t 
-                  from-gray-600 
-                  to-transparent 
-                  opacity-0 
-                  group-hover:opacity-100 
-                  transition-opacity 
-                  duration-500
-                "
-              />
-
-              {/* Text */}
-              <div
-                className="
-                  absolute 
-                  bottom-0 
-                  left-0 
-                  right-0 
-                  p-2 
-                  sm:p-3 
-                  text-center 
-                  transform 
-                  translate-y-full 
-                  group-hover:translate-y-0 
-                  transition-transform 
-                  duration-500
-                "
+                key={vehicle.name}
+                className="flex flex-col items-center cursor-pointer"
               >
-                <h3 className="text-white font-bold text-sm sm:text-base md:text-lg drop-shadow-lg">
+                {/* Circle */}
+                <div
+                  className={`
+                    rounded-full 
+                    overflow-hidden 
+                    circle-3d
+                    transition-all duration-300 
+                    hover:scale-110 ml-3
+                    ${vehicle.className}
+                  `}
+                >
+                  <img
+                    src={vehicle.img}
+                    alt={vehicle.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-gray-800">
                   {vehicle.name}
-                </h3>
+                </p>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import PorterStyleComponent from '../components/PorterStyleComponent';
 import { motion } from 'framer-motion';
 import videoBg from '../assets/bg.mp4';
 import OurServices from '../components/OurServices';
+import taxiImg from "../assets/taxi.png";
 
 // Your Real Driver Images
 import driverImage1 from '../assets/driver3.jpeg';
@@ -19,46 +20,83 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section - Now Fully Global Theme */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay loop muted playsInline preload="metadata"
-        >
-          <source src={videoBg} type="video/mp4" />
-        </video>
+      <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-10 mt-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-        {/* Dark overlay + subtle gradient glow from global */}
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
-        <div className="absolute inset-0 bg-primary/5" /> {/* Subtle golden tint */}
+    {/* LEFT TEXT */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="space-y-6 text-center md:text-left"
+    >
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-black 
+      drop-shadow-[0_4px_18px_rgba(0,0,0,0.25)] mt-4 md:mt-10">
+        Always There To <br /> 
+        Take You <span className="text-yellow-400 drop-shadow-[0_3px_12px_rgba(255,223,0,0.5)]">Anywhere</span>
+      </h1>
 
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-4xl md:text-7xl lg:text-7xl font-extrabold text-white mb-6 leading-tight"
-          >
-            <span className='text-yellow-400'>B</span>ook <span className='text-white'>A</span>ny <span className='text-white'>V</span>ehicle in{" "}
-            <span className="text-white drop-shadow-2xl">60 Seconds</span>
-          </motion.h1>
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-md mx-auto md:mx-0">
+        Choose from a range of categories and prices, book your taxi instantly.
+      </p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center"
-          >
-            {/* Global btn-primary + outline style */}
-            <button className="bg-yellow-400 border border-white  text-xl font-bold px-4 py-2 flex items-center gap-2 group rounded-4xl cursor-pointer">
-              <h3 className='p-1'>Book Your Ride Now</h3>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300 icon-gradient" />
-            </button>
-          </motion.div>
+      {/* Buttons */}
+      <div className="flex justify-center md:justify-start gap-4 mt-6 flex-wrap">
+        <button className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-gray-300 text-gray-800 font-semibold hover:bg-gray-100 transition shadow-md">
+          Airport
+        </button>
+        <button className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-gray-300 text-gray-800 font-semibold hover:bg-gray-100 transition shadow-md">
+          Package
+        </button>
+      </div>
+
+      {/* Ratings */}
+      <div className="flex items-center justify-center md:justify-start gap-3 pt-2">
+        <div className="flex -space-x-3">
+          <img src="https://i.pravatar.cc/45?img=3" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white shadow" />
+          <img src="https://i.pravatar.cc/45?img=4" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white shadow" />
+          <img src="https://i.pravatar.cc/45?img=5" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white shadow" />
         </div>
+        <p className="font-bold text-gray-700 text-sm sm:text-base">
+          4.8★ <span className="text-gray-500">Based on 5k+ reviews</span>
+        </p>
+      </div>
 
-        
-      </section>
+      {/* CTA */}
+      <motion.button
+        whileHover={{ scale: 1.04 }}
+        className="mt-6 sm:mt-8 bg-yellow-500 hover:bg-yellow-600 text-black px-7 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl flex items-center gap-2 mx-auto md:mx-0 shadow-[0_10px_25px_rgba(255,199,0,0.45)] transition-all"
+      >
+        Book Your Ride Now
+        <ArrowRight />
+      </motion.button>
+    </motion.div>
+
+    {/* RIGHT IMAGE */}
+    <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="w-full flex justify-center"
+    >
+      <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
+        <img
+          src={taxiImg}
+          alt="Taxi"
+          className="w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+        />
+
+        {/* Yellow Glow */}
+        <div className="absolute -bottom-3 left-0 w-full h-3 bg-yellow-500 rounded-full blur-lg opacity-60" />
+      </div>
+    </motion.div>
+
+  </div>
+</section>
+
+
 
       <OurServices />
 

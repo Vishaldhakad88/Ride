@@ -195,7 +195,7 @@ export default function Navbar() {
             <a
               href="#book"
               onClick={handleBookNow}
-              className="btn btn-primary text-2xl font-bold py-5 text-center mt-6"
+              className="bg-yellow-400 text-2xl font-bold py-5 text-center mt-6"
             >
               Book Now
             </a>
