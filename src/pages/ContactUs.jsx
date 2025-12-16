@@ -12,6 +12,13 @@ import {
 
 import contactbg from '../assets/contactbg.png';
 
+
+import InstagramIcon from "../assets/insta.png";
+import FacebookIcon from "../assets/face.png";
+import LinkedinIcon from "../assets/linkdin.png";
+import TwitterIcon from "../assets/twit.png";
+
+
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: '',
@@ -234,24 +241,44 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <div className="bg-white/70 backdrop-blur-xl border border-white/30 rounded-3xl p-6 md:p-10 shadow-2xl">
-              <h3 className="text-2xl md:text-3xl font-bold text-black mb-6 md:mb-8 text-center">
-                Stay Connected
-              </h3>
-              <div className="flex gap-4 md:gap-6 justify-center flex-wrap">
-                {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
-                  <motion.a
-                    key={i}
-                    href="#"
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-12 h-12 md:w-16 md:h-16 bg-amber-400 rounded-2xl flex items-center justify-center text-white shadow-xl"
-                  >
-                    <Icon className="w-6 h-6 md:w-8 md:h-8" />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
+           <div className="relative bg-white/65 backdrop-blur-2xl border border-white/40 rounded-3xl p-6 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
+  {/* Yellow Glow */}
+  <div className="absolute -top-10 -right-10 w-40 h-40 bg-yellow-400/30 blur-3xl rounded-full" />
+
+  <h4 className="relative text-2xl md:text-3xl font-extrabold text-black mb-6 md:mb-8 text-center">
+    Stay <span className="text-yellow-500">Connected</span>
+  </h4>
+
+  <div className="relative flex gap-6 md:gap-10 mt-8 justify-center flex-wrap">
+    {[
+      { img: FacebookIcon, alt: "Facebook" },
+      { img: InstagramIcon, alt: "Instagram" },
+      { img: TwitterIcon, alt: "Twitter" },
+      { img: LinkedinIcon, alt: "LinkedIn" },
+    ].map((item, idx) => (
+      <a
+        key={idx}
+        href="#"
+        className="group"
+      >
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/50 flex items-center justify-center
+          shadow-[0_12px_30px_rgba(0,0,0,0.25)]
+          transition-all duration-300
+          group-hover:-translate-y-2
+          group-hover:scale-110
+          group-hover:shadow-[0_20px_45px_rgba(250,204,21,0.6)]">
+
+          <img
+            src={item.img}
+            alt={item.alt}
+            className="w-6 h-6 md:w-7 md:h-7"
+          />
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+
           </motion.div>
         </div>
       </section>

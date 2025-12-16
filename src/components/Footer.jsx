@@ -1,8 +1,14 @@
-import { Mail, Phone, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Phone } from "lucide-react";
 
-// NEW IMPORTS (as requested)
-import AppStore from '../assets/appStore.png';
-import GooglePlay from '../assets/GooglePlay.png';
+// App Store Images
+import AppStore from "../assets/appStore.png";
+import GooglePlay from "../assets/GooglePlay.png";
+
+// Social Media Images
+import InstagramIcon from "../assets/insta.png";
+import FacebookIcon from "../assets/face.png";
+import LinkedinIcon from "../assets/linkdin.png";
+import TwitterIcon from "../assets/twit.png";
 
 export default function Footer() {
   return (
@@ -19,15 +25,24 @@ export default function Footer() {
             Fast, reliable and affordable vehicle booking across India.
           </p>
 
-          {/* Social Icons */}
+          {/* Social Icons (IMAGES) */}
           <div className="flex gap-6 mt-10">
-            {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
+            {[
+              { img: FacebookIcon, alt: "Facebook" },
+              { img: InstagramIcon, alt: "Instagram" },
+              { img: TwitterIcon, alt: "Twitter" },
+              { img: LinkedinIcon, alt: "LinkedIn" },
+            ].map((item, idx) => (
               <a
                 key={idx}
                 href="#"
-                className="text-gray-500 hover:text-primary transition-all duration-300 hover:scale-125"
+                className="transition-all duration-300 hover:scale-125"
               >
-                <Icon className="w-7 h-7 icon-gradient" />
+                <img
+                  src={item.img}
+                  alt={item.alt}
+                  className="w-7 h-7"
+                />
               </a>
             ))}
           </div>
@@ -35,29 +50,65 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-white font-bold text-xl mb-8 relative inline-block
-            after:content-[''] after:absolute after:left-0 after:bottom-[-8px] 
-            after:h-1 after:bg-primary after:rounded-full after:w-12 after:transition-all after:duration-500
-            hover:after:w-full">
-            Quick Links
-          </h3>
+  <h3
+    className="text-white font-bold text-xl mb-8 relative inline-block
+      after:content-[''] after:absolute after:left-0 after:bottom-[-8px] 
+      after:h-1 after:bg-primary after:rounded-full after:w-12 after:transition-all after:duration-500
+      hover:after:w-full"
+  >
+    Quick Links
+  </h3>
 
-          <ul className="space-y-5">
-            {['About Us', 'Services', 'Privacy Policy', 'Terms of Service'].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
-                    after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
-                    after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
-                    hover:after:w-full"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+  <ul className="space-y-5">
+    <li>
+      <a
+        href="/about"
+        className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
+          after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+          after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
+          hover:after:w-full"
+      >
+        About Us
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="/services"
+        className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
+          after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+          after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
+          hover:after:w-full"
+      >
+        Services
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="/privacy-policy"
+        className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
+          after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+          after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
+          hover:after:w-full"
+      >
+        Privacy Policy
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="/terms-of-service"
+        className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
+          after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+          after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
+          hover:after:w-full"
+      >
+        Terms of Service
+      </a>
+    </li>
+  </ul>
+</div>
 
         {/* Contact */}
         <div>
@@ -102,6 +153,7 @@ export default function Footer() {
                   group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(181,152,64,0.6)]"
               />
             </a>
+
             <a href="#" className="block group">
               <img
                 src={AppStore}

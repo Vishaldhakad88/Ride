@@ -42,17 +42,17 @@ export default function Home() {
       </p>
 
       {/* Buttons */}
-      <div className="flex justify-center md:justify-start gap-4 mt-6 flex-wrap">
+      {/* <div className="flex justify-center md:justify-start gap-4 mt-6 flex-wrap">
         <button className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-gray-300 text-gray-800 font-semibold hover:bg-gray-100 transition shadow-md">
           Airport
         </button>
         <button className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-gray-300 text-gray-800 font-semibold hover:bg-gray-100 transition shadow-md">
           Package
         </button>
-      </div>
+      </div> */}
 
       {/* Ratings */}
-      <div className="flex items-center justify-center md:justify-start gap-3 pt-2">
+      {/* <div className="flex items-center justify-center md:justify-start gap-3 pt-2">
         <div className="flex -space-x-3">
           <img src="https://i.pravatar.cc/45?img=3" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white shadow" />
           <img src="https://i.pravatar.cc/45?img=4" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-white shadow" />
@@ -61,7 +61,7 @@ export default function Home() {
         <p className="font-bold text-gray-700 text-sm sm:text-base">
           4.8★ <span className="text-gray-500">Based on 5k+ reviews</span>
         </p>
-      </div>
+      </div> */}
 
       {/* CTA */}
       <motion.button
