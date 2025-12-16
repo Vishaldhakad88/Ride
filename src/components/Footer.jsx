@@ -86,7 +86,7 @@ export default function Footer() {
 
     <li>
       <a
-        href="/privacy-policy"
+        href="/privacy_policy"
         className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
           after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
           after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
@@ -98,7 +98,7 @@ export default function Footer() {
 
     <li>
       <a
-        href="/terms-of-service"
+        href="/terms_service"
         className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
           after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
           after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500

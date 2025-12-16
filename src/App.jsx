@@ -30,8 +30,8 @@ export default function App() {
            <Route path="/newsroom" element={<Newsroom/>}/>
            <Route path="/newsroom" element={<Newsroom/>}/>
             <Route path="/safety" element={<Safety/>}/>
-            <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
-            <Route path="/terms-of-service" element={<TermsOfService/>}/>
+            <Route path="/privacy_policy" element={<PrivacyPolicy/>}/>
+            <Route path="/terms_service" element={<TermsOfService/>}/>
       </Routes>
     </BrowserRouter>
   );
