@@ -12,6 +12,7 @@ import Safety from './pages/Safety';
 import TrydeAds from './pages/TrydeAds';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import RefundPolicy from './pages/RefundPolicy';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/safety" element={<Safety/>}/>
             <Route path="/privacy_policy" element={<PrivacyPolicy/>}/>
             <Route path="/terms_service" element={<TermsOfService/>}/>
+            <Route path="/refund_policy" element={<RefundPolicy/>}/>
       </Routes>
     </BrowserRouter>
   );

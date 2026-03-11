@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Car, Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -67,14 +68,18 @@ export default function Navbar() {
           {/* LOGO */}
           <Link
             to="/"
-            className="text-3xl font-bold text-yellow-400 flex items-center gap-1"
+            className="flex items-center gap-1"
             onClick={() => {
               setMobileMenu(false);
               if (location.pathname === "/")
                 window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            TRY <Car className="text-yellow-300" /> DE
+            <img 
+              src={Logo} 
+              alt="Ryde Logo" 
+              className="h-16 w-auto"
+            />
           </Link>
 
           {/* DESKTOP MENU */}

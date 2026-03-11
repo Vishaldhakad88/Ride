@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // App Store Images
 import AppStore from "../assets/appStore.png";
@@ -9,6 +10,7 @@ import InstagramIcon from "../assets/insta.png";
 import FacebookIcon from "../assets/face.png";
 import LinkedinIcon from "../assets/linkdin.png";
 import TwitterIcon from "../assets/twit.png";
+import Logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
@@ -17,9 +19,13 @@ export default function Footer() {
 
         {/* Logo & Description */}
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-6">
-            Ryde
-          </h2>
+          <Link to="/" className="inline-block mb-6">
+            <img 
+              src={Logo} 
+              alt="Ryde Logo" 
+              className="h-16 w-auto"
+            />
+          </Link>
 
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             Fast, reliable and affordable vehicle booking across India.
@@ -105,6 +111,18 @@ export default function Footer() {
           hover:after:w-full"
       >
         Terms of Service
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="/refund_policy"
+        className="text-gray-400 hover:text-primary transition-all duration-300 relative inline-block
+          after:content-[''] after:absolute after:left-0 after:bottom-[-4px]
+          after:h-0.5 after:bg-primary after:rounded-full after:w-0 after:transition-all after:duration-500
+          hover:after:w-full"
+      >
+        Refund Policy
       </a>
     </li>
   </ul>
