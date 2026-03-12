@@ -8,7 +8,7 @@ function Safety() {
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-gradient-to-r from-yellow-400 to-orange-500 py-24 text-center">
+      <section className="bg-gradient-to-r from-yellow-400 to-orange-500 py-28 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
             Your Safety Is Our Priority

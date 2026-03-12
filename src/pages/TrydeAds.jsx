@@ -2,24 +2,24 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-export default function TydeAdsSection() {
+export default function TrydeAdsSection() {
   return (
     <>
     <Navbar />
-    <section className="relative bg-gradient-to-b from-white via-yellow-50 to-white py-24 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-white via-yellow-50 to-white py-28 px-6 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute -top-20 -left-20 w-96 h-96 bg-yellow-400/30 blur-3xl rounded-full" />
+      <div className="absolute -top-22 -left-20 w-96 h-96 bg-yellow-400/30 blur-3xl rounded-full" />
       <div className="absolute bottom-0 -right-20 w-96 h-96 bg-black/10 blur-3xl rounded-full" />
 
       {/* Heading */}
       <div className="relative max-w-6xl mx-auto text-center mb-16 animate-fadeUp">
         <h2 className="text-4xl md:text-5xl font-extrabold text-black">
           Advertise on{" "}
-          <span className="text-yellow-400 drop-shadow-sm">Tyde</span>
+          <span className="text-yellow-400 drop-shadow-sm">Tryde</span>
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
           Promote your business to daily taxi riders and porter users with
-          high-visibility ads inside the Tyde app.
+          high-visibility ads inside the Tryde app.
         </p>
       </div>
 
@@ -34,7 +34,7 @@ export default function TydeAdsSection() {
           </h3>
 
           <p className="text-gray-700 mb-6">
-            Show your brand to passengers while they book or travel using Tyde
+            Show your brand to passengers while they book or travel using Tryde
             Taxi. Perfect for restaurants, apps & local stores.
           </p>
 
@@ -59,7 +59,7 @@ export default function TydeAdsSection() {
 
           <p className="text-gray-700 mb-6">
             Reach shop owners, vendors and businesses who transport goods using
-            Tyde Porter services.
+            Tryde Porter services.
           </p>
 
           <ul className="space-y-2 text-gray-800 mb-8">
@@ -77,7 +77,7 @@ export default function TydeAdsSection() {
       {/* Bottom CTA */}
       <div className="relative text-center mt-20 animate-fadeUp">
         <h3 className="text-3xl font-bold text-black mb-4">
-          Grow Faster with Tyde Ads
+          Grow Faster with Tryde Ads
         </h3>
         <p className="text-gray-600 mb-8">
           Smart targeting • Affordable pricing • Real-time results
